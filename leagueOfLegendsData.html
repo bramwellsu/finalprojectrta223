@@ -1,0 +1,164 @@
+<!--
+Created by Bramwell Su
+RTA 223
+April 4 2013
+
+Some code based off from:
+http://cssmenumaker.com/
+http://www.cssbuttongenerator.com/
+http://snook.ca/archives/javascript/simplest-jquery-slideshow
+http://css-tricks.com/snippets/jquery/simple-auto-playing-slideshow/
+-->
+<!DOCTYPE html>
+<html>
+
+<div class='globalDIV'>
+  <div id='cssmenu'>
+    <ul>
+       <li><a href='index.html'><span>Game Journal</span></a></li>
+       <li><a href='myjournal.html'><span>My Journal</span></a></li>
+       <li><a href='account.html'><span>Account</span></a></li>
+       <li><a href='friends.html'><span>Friends</span></a></li>
+       <li ><a href='support.html'><span>Support</span></a></li>
+         <li ><a href='#'><span>Login/Logout</span></a></li>
+         <li class='last' align="right"><span><input type="search" name="databaseSearch"><input Type="submit" value="Search"></span>
+         </li>
+    </ul>
+  </div>
+
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <title>Game Journal</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+        <script>
+          
+
+          var delay = 4000; //delay between messages in milliseconds
+          var currentMessage = 1; //whats the currentlly displayed message index?
+          var messages = new Array(); //array containing all of the messages
+          messages[0] = 'Titanfall delayed for XBox 360';
+          messages[1] = 'Sony announces Project Morpheus, a new Virtual Reality Set';
+          messages[2] = 'Twitch Beats Lord Helix';
+        
+          /**
+          * Does all the hard work making the message switch.
+          */
+          function switchMessage(){
+            if(currentMessage == messages.length){
+                currentMessage = 0; 
+            }
+
+            document.getElementById("messageContainer").innerHTML = messages[currentMessage++];
+          }
+        
+          window.onload = function(){
+            setInterval(switchMessage, delay);  //setting a repeating interval instead of a timeout
+          }
+
+          $(function(){
+          $('.datalinks > :gt(0)').hide();
+          setInterval(function(){$('.datalinks > :first-child').fadeOut().next().fadeIn().end().appendTo('.datalinks');}, delay);
+          });
+        </script>
+  </head>
+
+  <body>
+  <a href="index.html"><img src="data/logo.png" width="100%" height="200"></img></a>
+    <br />
+
+    <hr />
+
+    <table style="width:100%; height:100%;">
+      <tr style="width:100%;">
+          <td style="width:40%; height:50%;">
+            <div class="columnBox" align="left">
+                  <div>
+                    <img class="avatar" src="data/League_of_Legends.png" height="100px" width="300px"></img>
+                  </div>
+                  <div class="datalinks" align="center">
+                   <img src="data/spider_1.jpg" width="400" height="200"></img>
+                   <img src="data/HowlingAbyss_SS144.jpg" width="400" height="200"></img>
+                   <img src="data/npg-controls.jpg" width="400" height="200"></img>
+                   <img src="data/teamfight2.jpg" width="400" height="200"></img>
+                  </div>
+                  <div>
+                  <p align="center">
+                      Genre: Multiplayer Online Battle Arena
+                      <br />
+                      Release Date: October 27 2009
+                      <br />
+                      Developer: Riot Games
+                      <br />
+                      Publisher: Riot Games
+                      <br />
+                      Metacritic: 78
+                      <br />
+                      Website: <a href="http://www.bioshockinfinite.com/"> http://www.bioshockinfinite.com/</a>
+                    </p>
+                    <hr />
+                    <p align="center">
+                      Game Owned: Yes
+                      <br />
+                      Last Time Played: 10 March 2014
+                      <br />
+                      Total Time Played: 50 Hours 10 Minutes
+                      <br />
+                      Achievements: N/A
+                    </p>
+                    <hr />
+                  </div>
+                </div>
+            </td>
+        
+          <td rowspan="2" style="width:60%; height:100%;">
+                <div class="columnBox" align="left">
+                    <h1 align="left">League of Legends</h1>
+                    <h3>About the Game</h3>
+                    <p>
+                      League of Legends is a fast-paced, competitive online game that blends the speed and intensity of an RTS with RPG elements. Two teams of powerful champions, each with a unique design and playstyle, battle head-to-head across multiple battlefields and game modes. With an ever-expanding roster of champions, frequent updates and a thriving tournament scene, League of Legends offers endless replayability for players of every skill level.
+                    </p>
+                    <hr />
+                    <h3 align="center">Global Ranking</h3>
+                    <img class="meter" src="data/globalRank4.png"></img>
+                    <h3 align="center">Friends Ranking</h3>
+                    <img class="meter" src="data/friendRank4.png"></img>
+                    <h3>Latest Achievments</h3>
+                    <hr />
+                    <h3>Tips from Friends</h3>
+                    <p align="left">
+                      <img class="avatar" src="data/Gordon_Freeman.jpg" width="100" height="100"></img>
+                      "..."
+                    </p>
+                    <p align="right">
+                      "Teemo FTW!"
+                      <img class="avatar" src="data/1cd6673e-1094-4f1d-9b04-b59b2730995f.jpg" width="100" height="100"></img>
+                    </p>
+                    <p align="left">
+                      <img class="avatar" src="data/Creeper-the-minecraft-creeper-32729200-1200-1200.png" width="100" height="100" ></img>
+                      "Death to Teemo!"
+                    </p>
+                    <p align="right">
+                      "League sucks! Play Heroes of the Storm instead!"
+                      <img class="avatar" src="data/jenkins.jpg" width="100" height="100" ></img>
+                    </p>
+
+                </div>
+            </td>
+        </tr>
+                 
+        
+    </table>
+    
+  </body>
+  <footer>
+    <div class="columnBox" align="center">
+      <a href="https://www.facebook.com/"><img src="data/facebook.png"></img></a>
+      <a href="https://twitter.com/"><img src="data/twitter.png"></img></a>
+      <a href="https://plus.google.com/"><img src="data/google.png"></img></a>
+            © 2014 Clockwork Productions
+    </div>
+  </footer>
+</div>
+</html>

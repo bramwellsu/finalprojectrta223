@@ -1,0 +1,176 @@
+<!--
+Created by Bramwell Su
+RTA 223
+April 4 2013
+
+Some code based off from:
+http://cssmenumaker.com/
+http://www.cssbuttongenerator.com/
+http://snook.ca/archives/javascript/simplest-jquery-slideshow
+http://css-tricks.com/snippets/jquery/simple-auto-playing-slideshow/
+-->
+<!DOCTYPE html>
+<html>
+
+<div class='globalDIV'>
+  <div id='cssmenu'>
+    <ul>
+       <li><a href='index.html'><span>Game Journal</span></a></li>
+       <li><a href='myjournal.html'><span>My Journal</span></a></li>
+       <li><a href='account.html'><span>Account</span></a></li>
+       <li><a href='friends.html'><span>Friends</span></a></li>
+       <li ><a href='support.html'><span>Support</span></a></li>
+         <li ><a href='#'><span>Login/Logout</span></a></li>
+         <li class='last' align="right"><span><input type="search" name="databaseSearch"><input Type="submit" value="Search"></span>
+         </li>
+    </ul>
+  </div>
+
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <title>Game Journal</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+        <script>
+          
+
+          var delay = 4000; //delay between messages in milliseconds
+          var currentMessage = 1; //whats the currentlly displayed message index?
+          var messages = new Array(); //array containing all of the messages
+          messages[0] = 'Titanfall delayed for XBox 360';
+          messages[1] = 'Sony announces Project Morpheus, a new Virtual Reality Set';
+          messages[2] = 'Twitch Beats Lord Helix';
+        
+          /**
+          * Does all the hard work making the message switch.
+          */
+          function switchMessage(){
+            if(currentMessage == messages.length){
+                currentMessage = 0; 
+            }
+
+            document.getElementById("messageContainer").innerHTML = messages[currentMessage++];
+          }
+        
+          window.onload = function(){
+            setInterval(switchMessage, delay);  //setting a repeating interval instead of a timeout
+          }
+
+          $(function(){
+          $('.datalinks > :gt(0)').hide();
+          setInterval(function(){$('.datalinks > :first-child').fadeOut().next().fadeIn().end().appendTo('.datalinks');}, delay);
+          });
+        </script>
+  </head>
+
+  <body>
+  <a href="index.html"><img src="data/logo.png" width="100%" height="200"></img></a>
+    <br />
+
+    <hr />
+
+    <table style="width:100%; height:100%;">
+      <tr style="width:100%;">
+          <td style="width:40%; height:50%;">
+            <div class="columnBox" align="left">
+                  <div>
+                    <img class="avatar" src="data/500px-BioShock_Infinite_Logo.png" height="100px" width="300px"></img>
+                  </div>
+                  <div class="datalinks" align="center">
+                   <img src="data/ss_26e2d983948edfb911db3e0d2c3679900b4ef9fa.600x338.jpg" width="400" height="200"></img>
+                   <img src="data/ss_e98deaf0e334206b84c2462276aee98107fa20d0.600x338.jpg" width="400" height="200"></img>
+                   <img src="data/ss_fd6f5de55332f6c3cd119a01a9e017e840765c0e.600x338.jpg" width="400" height="200"></img>
+                   <img src="data/ss_d45294620026ff41f7e6b8610c6d60e13645fbf3.600x338.jpg" width="400" height="200"></img>
+                  </div>
+                  <div>
+                  <p align="center">
+                      Genre: Action
+                      <br />
+                      Release Date: 25 March 2013
+                      <br />
+                      Developer: Irrational Games
+                      <br />
+                      Publisher: 2K Games
+                      <br />
+                      Metacritic: 94
+                      <br />
+                      Website: <a href="http://www.bioshockinfinite.com/"> http://www.bioshockinfinite.com/</a>
+                    </p>
+                    <hr />
+                    <p align="center">
+                      Game Owned: Yes
+                      <br />
+                      Last Time Played: 2 March 2014
+                      <br />
+                      Total Time Played: 20 Hours 3 Minutes
+                      <br />
+                      Achievements: 80
+                    </p>
+                    <hr />
+                  </div>
+                </div>
+            </td>
+        
+          <td rowspan="2" style="width:60%; height:100%;">
+                <div class="columnBox" align="left">
+                    <h1 align="left">Bioshock Infinite</h1>
+                    <h3>About the Game</h3>
+                    <p>
+                      Indebted to the wrong people, with his life on the line, veteran of the U.S. Cavalry and now hired gun, Booker DeWitt has only one opportunity to wipe his slate clean. He must rescue Elizabeth, a mysterious girl imprisoned since childhood and locked up in the flying city of Columbia. Forced to trust one another, Booker and Elizabeth form a powerful bond during their daring escape. Together, they learn to harness an expanding arsenal of weapons and abilities, as they fight on zeppelins in the clouds, along high-speed Sky-Lines, and down in the streets of Columbia, all while surviving the threats of the air-city and uncovering its dark secret.
+                    </p>
+                    <hr />
+                    <h3 align="center">Global Ranking</h3>
+                    <img class="meter" src="data/globalRank3.png"></img>
+                    <h3 align="center">Friends Ranking</h3>
+                    <img class="meter" src="data/friendRank3.png"></img>
+                    <h3>Latest Achievments</h3>
+                    <div>
+                      <img src="data/1594-49.png" align="left" width="64" height="64"></img>
+                      Scavanger Hunt
+                      <br />
+                      Achieved: 2 March 2014
+                      <br />
+                      Number of Players that has this: 0.1%;
+                    </div> 
+                    <div>
+                      <img src="data/1594-37.png" align="left" width="64" height="64"></img>
+                      Lost Weekend
+                      <br />
+                      Achieved: 2 March 2014
+                      <br />
+                      Number of Players that has this: 33%;
+                    </div> 
+                    <div>
+                      <img src="data/1594-15.png" align="left" width="64" height="64"></img>
+                      Aerial Assassin
+                      <br />
+                      Achieved: 1 March 2014
+                      <br />
+                      Number of Players that has this: 56%;
+                    </div> 
+                    <hr />
+                    <h3>Tips from Friends</h3>
+                    <p>
+                      <img class="avatar" src="data/Gordon_Freeman.jpg" width="100" height="100" align="left"></img>
+                      "..."
+                    </p>
+
+                </div>
+            </td>
+        </tr>
+                 
+        
+    </table>
+    
+  </body>
+  <footer>
+    <div class="columnBox" align="center">
+      <a href="https://www.facebook.com/"><img src="data/facebook.png"></img></a>
+      <a href="https://twitter.com/"><img src="data/twitter.png"></img></a>
+      <a href="https://plus.google.com/"><img src="data/google.png"></img></a>
+            © 2014 Clockwork Productions
+    </div>
+  </footer>
+</div>
+</html>

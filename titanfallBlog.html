@@ -1,0 +1,127 @@
+<!--
+Created by Bramwell Su
+RTA 223
+April 4 2013
+
+Some code based off from:
+http://cssmenumaker.com/
+http://www.cssbuttongenerator.com/
+http://snook.ca/archives/javascript/simplest-jquery-slideshow
+http://css-tricks.com/snippets/jquery/simple-auto-playing-slideshow/
+-->
+<!DOCTYPE html>
+<html>
+
+<div class='globalDIV'>
+	<div id='cssmenu'>
+		<ul>
+		   <li><a href='index.html'><span>Game Journal</span></a></li>
+		   <li><a href='myjournal.html'><span>My Journal</span></a></li>
+		   <li><a href='account.html'><span>Account</span></a></li>
+		   <li><a href='friends.html'><span>Friends</span></a></li>
+		   <li ><a href='support.html'><span>Support</span></a></li>
+	       <li ><a href='#'><span>Login/Logout</span></a></li>
+	       <li class='last' align="right"><span><input type="search" name="databaseSearch"><input Type="submit" value="Search"></span>
+	       </li>
+		</ul>
+	</div>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="mystyle.css">
+		<title>Game Journal</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+        <script>
+          
+
+          var delay = 4000; //delay between messages in milliseconds
+          var currentMessage = 1; //whats the currentlly displayed message index?
+          var messages = new Array(); //array containing all of the messages
+          messages[0] = 'Titanfall delayed for XBox 360';
+          messages[1] = 'Sony announces Project Morpheus, a new Virtual Reality Set';
+          messages[2] = 'Twitch Beats Lord Helix';
+        
+          /**
+          * Does all the hard work making the message switch.
+          */
+          function switchMessage(){
+            if(currentMessage == messages.length){
+                currentMessage = 0; 
+            }
+
+            document.getElementById("messageContainer").innerHTML = messages[currentMessage++];
+          }
+        
+          window.onload = function(){
+            setInterval(switchMessage, delay);  //setting a repeating interval instead of a timeout
+          }
+
+          $(function(){
+          $('.fadelinks > :gt(0)').hide();
+          setInterval(function(){$('.fadelinks > :first-child').fadeOut().next().fadeIn().end().appendTo('.fadelinks');}, delay);
+          });
+        </script>
+	</head>
+
+	<body>
+	<a href="index.html"><img src="data/logo.png" width="100%" height="200"></img></a>
+    <br />
+
+    <hr />
+
+    <table style="width:100%; height:100%;">
+    	<tr style="width:100%;">
+        	<td style="width:20%; height:100%;">
+	                <div class="columnBox" align="center">
+	                    <h1>Featured News</h1>
+                        <hr />
+                        <div class="fadelinks" align="center">
+                             <a href="titanfallBlog.html"><img src="data/lb4mxmjnfeslr8fah887.jpg" width="200" height="200"></img></a>
+                             <a href="morpheusBlog.html"><img src="data/project_morpheus_press.0_cinema_960.0.jpg" width="200" height="200"></img></a>
+                             <a href="twitchHelixBlog.html"><img src="data/11fafff969ca8bdd73ee91dd3bfb9180-twitch-plays-pokemon-has-killed-lord-helix.jpg" width="200" height="200"></img></a>
+                        </div>
+                        <h3><div id="messageContainer" class="truncate" align="center"></div></h3>
+                        <hr />
+                        <h2>Recent News</h2>
+                        <hr />
+                        <a href="titanfallBlog.html"><img src="data/lb4mxmjnfeslr8fah887.jpg" width="75" height="50" align="left"></img></a>
+                        <h3>TitanFall delayed for Xbox 360</h3>
+                        <br />
+
+                        <a href="morpheusBlog.html"><img src="data/project_morpheus_press.0_cinema_960.0.jpg" width="75" height="50" align="left"></img></a>
+                        <h3>Sony announces Project Morpheus</h3>
+                        <br />
+
+                        <a href="twitchHelixBlog.html"><img src="data/11fafff969ca8bdd73ee91dd3bfb9180-twitch-plays-pokemon-has-killed-lord-helix.jpg" width="75" height="50" align="left"></img></a>
+                        <h3>Twitch beats Lord Helix</h3>
+	                </div>
+            </td>
+        
+        	<td style="width:80%; height:50%;">
+                <div class="columnBox" align="center">
+                    <h1 align="left">Titanfall delayed for Xbox 360</h1>
+                    <div align="left">March 19, 2014<div>
+                    <br />
+                    <img src="data/lb4mxmjnfeslr8fah887.jpg" width="100%" height="60%" align="center"></img>
+                    <br />
+                    <p align="left">Patrick Söderlund, president of EA, has posted today that Titanfall's launch for the Xbox 360 will be delayed for two weeks due to last minute improvements.</p>
+                </div>
+            </td>
+        </tr>
+       
+       	         
+        
+    </table>
+    
+	</body>
+  <footer>
+    <div class="columnBox" align="center">
+      <a href="https://www.facebook.com/"><img src="data/facebook.png"></img></a>
+      <a href="https://twitter.com/"><img src="data/twitter.png"></img></a>
+      <a href="https://plus.google.com/"><img src="data/google.png"></img></a>
+            © 2014 Clockwork Productions
+    </div>
+  </footer>
+</div>
+</html>

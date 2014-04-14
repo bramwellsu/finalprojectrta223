@@ -1,0 +1,206 @@
+<!--
+Created by Bramwell Su
+RTA 223
+April 4 2013
+
+Some code based off from:
+http://cssmenumaker.com/
+http://www.cssbuttongenerator.com/
+http://snook.ca/archives/javascript/simplest-jquery-slideshow
+http://css-tricks.com/snippets/jquery/simple-auto-playing-slideshow/
+-->
+<!DOCTYPE html>
+<html>
+
+<div class='globalDIV'>
+	<div id='cssmenu'>
+		<ul>
+		   <li><a href='index.html'><span>Game Journal</span></a></li>
+		   <li><a href='myjournal.html'><span>My Journal</span></a></li>
+		   <li><a href='account.html'><span>Account</span></a></li>
+		   <li><a href='friends.html'><span>Friends</span></a></li>
+		   <li ><a href='support.html'><span>Support</span></a></li>
+	       <li ><a href='#'><span>Login/Logout</span></a></li>
+	       <li class='last' align="right"><span><input type="search" name="databaseSearch"><input Type="submit" value="Search"></span>
+	       </li>
+		</ul>
+	</div>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="mystyle.css">
+		<title>Game Journal</title>
+	</head>
+
+	<body>
+	<a href="index.html"><img src="data/logo.png" width="100%" height="200"></img></a>
+    <br />
+    <div class="columnBox" align="justify">
+            <img class="avatar" src="data/Mario.jpg" width="50" height="50" align="left"></img>
+            <h1 align="center">Mario's Game Journal</h1>
+        </div>
+    <hr />
+
+    <table style="width:100%; height:100%;">
+    	<tr style="width:100%;">
+        	<td style="width:33%; height:auto;">
+        		<div class="column1">
+	                <div class="journalBox" align="center">
+	                    <h2>Now Playing</h2>
+                        <hr />
+                        <div>
+                        <a href="leagueOfLegendData.html"><img src="data/League_of_Legends.png" width="100" height="50" align="left"></img></a>
+                        <h3>Last Update: 03/10/14</h3>
+                        
+                        </div>
+                        <br />
+                        <div>
+                            <a href="bioshockInfiniteData.html"><img src="data/500px-BioShock_Infinite_Logo.png" width="100" height="50" align="left"></img></a>
+                            <h3>Last Update: 02/03/14</h3>
+                        </div>
+                        <br />
+                        <div>
+                            <a href="titanFallData.html"><img src="data/Titanfall_logo.png" width="100" height="50" align="left"></img></a>
+                            <h3>Last Update: 02/28/14</h3>
+                        </div>
+                        <br />
+                        <div>
+                            <a href="ftlData.html"><img src="data/FTL_Faster_Than_Light_Logo.jpg" width="100" height="50" align="left"></img></a>
+                            <h3>Last Update: 02/15/14</h3>
+                        </div>
+	                </div>
+                </div>
+            </td>
+            <td style="width:33%; height:auto;">
+                <div class="column2">
+                    <div class="journalBox" align="center">
+                        <h2>A Year Ago...</h2>
+                        <hr />
+                        <div>
+                            <a href="muramasaData.html"><img src="data/muramasa_the_demon_blade_logo.png" width="100" height="50" align="left"></img></a>
+                            <h3>Started Playing</h3>
+                        </div>
+                        <br />
+                        <div>
+                            <a href="999Data.html"><img src="data/999_logo_black_text.png" width="100" height="50" align="left"></img></a>
+                            <h3>Finished</h3>
+                        </div>
+                    </div>
+                </div>
+        	</td>
+        
+        	<td style="width:33%; height:auto;">
+                <div class="column3" align="center">
+                    <div class="journalBox">
+                        <h2>Add New Game</h2>
+                        <hr />
+                        <form>
+                        Game Title: <input type="text" name="gameTitle">
+                        <br>
+                        <form action="">
+                        Console: <select name="consoles">
+                            <option value="pc">PC</option>
+                            <option value="playstation">Playstation</option>
+                            <<option value="playstation2">Playstation 2</option>
+                            <option value="playstation3">Playstation 3</option>
+                            <option value="playstation4">Playstation 4</option>
+                            <option value="psp">PSP</option>
+                            <option value="psVita">PS Vita</option>
+                            <option value="n64">Nintendo 64</option>
+                            <option value="wii">Nintendo Wii</option>
+                            <option value="wiiU">Nintendo Wii U</option>
+                            <option value="ds">Nintendo DS</option>
+                            <option value="3ds">Nintendo 3DS</option>
+                            <option value="xbox">XBox</option>
+                            <option value="xbox360">Xbox 360</option>
+                            <option value="xboxOne">Xbox One</option>
+                        </select>
+                        </form>   
+                        <br>
+                        <input type="submit" value="Search">
+                        <input type="submit" value="Advanced Search">
+                        </form>
+                    </div>
+                </div>
+        	</td>  
+        </tr>
+
+        <tr>
+            <td style="width:33%; height:auto;">
+                <div class="column1">
+                    <div class="journalBox" align="center">
+                        <img class="avatar" src="data/PC-logo.jpg" width="75" height="50" align="left"></img>
+                        <h2>PC</h2>
+                        <a href="editPC.html" class="readMoreBtn" >Edit</a>
+                        <hr />
+                        <div>
+                            <a href="leagueOfLegendsData.html"><img src="data/League_of_Legends.png" width="100" height="50" align="left"></img></a>
+                            <h3>Now Playing</h3>
+                        </div>
+                        <br />
+                        <div>
+                            <a href="teamFortress2Data.html"><img src="data/tf_logo.png" width="100" height="50" align="left"></img></a>
+                            <h3>N/A</h3>
+                        </div>
+                        <br />
+                        <div>
+                            <a href="bioshockInfiniteData.html"><img src="data/500px-BioShock_Infinite_Logo.png" width="100" height="50" align="left"></img></a>
+                            <h3>Now Playing</h3>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td style="width:33%; height:auto;">
+                <div class="column2">
+                    <div class="journalBox" align="center">
+                        <img class="avatar" src="data/CG_tol3t3_GN_2.jpg" width="75" height="50" align="left"></img>
+                        <h2>Playstation 3</h2>
+                        <a href="editPS3.html" class="readMoreBtn" >Edit</a>
+                        <hr />
+                        <div>
+                            <a href="beyondTwoSoulsData.html"><img src="data/800px-Beyond_Two_Souls_Logo.png" width="100" height="50" align="left"></img></a>
+                            <h3>Completed</h3>
+                        </div>
+                        <br />
+                        <div>
+                            <a href="assassinCreedData.html"><img src="data/550px-Assassin_s_Creed_Revelations_logo.svg.png" width="100" height="50" align="left"></img></a>
+                            <h3>Unplayed</h3>
+                        </div>
+                        <br />
+                        <div>
+                            <a href="scotPilgrimData.html"><img src="data/400px-Scott_Pilgrim_vs_the_World_The_Game_Wordmark.svg.png" width="100" height="50" align="left"></img></a>
+                            <h3>Unfinished</h3>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td style="width:33%; height:auto;">
+                <div class="column3">
+                    <div class="journalBox" align="center">
+                        <img class="avatar" src="data/Vita-Logo1.png" width="75" height="50" align="left"></img>
+                        <h2>PS Vita</h2>
+                        <a href="editPS3.html" class="readMoreBtn" >Edit</a>
+                        <hr />
+                        <div>
+                            <a href="beyondTwoSoulsData.html"><img src="data/muramasa_the_demon_blade_logo.png" width="100" height="50" align="left"></img></a>
+                            <h3>Unfinished</h3>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+          
+        
+    </table>
+    
+	</body>
+    <footer>
+        <div class="columnBox" align="center">
+            <a href="https://www.facebook.com/"><img src="data/facebook.png"></img></a>
+            <a href="https://twitter.com/"><img src="data/twitter.png"></img></a>
+            <a href="https://plus.google.com/"><img src="data/google.png"></img></a>
+            © 2014 Clockwork Productions
+        </div>
+    </footer>
+</div>
+</html>

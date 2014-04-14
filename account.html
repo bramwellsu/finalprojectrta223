@@ -1,0 +1,153 @@
+<!--
+Created by Bramwell Su
+RTA 223
+April 4 2013
+
+Some code based off from:
+http://cssmenumaker.com/
+http://www.cssbuttongenerator.com/
+http://snook.ca/archives/javascript/simplest-jquery-slideshow
+http://css-tricks.com/snippets/jquery/simple-auto-playing-slideshow/
+-->
+<!DOCTYPE html>
+<html>
+
+<div class='globalDIV'>
+	<div id='cssmenu'>
+		<ul>
+		   <li><a href='index.html'><span>Game Journal</span></a></li>
+		   <li><a href='myjournal.html'><span>My Journal</span></a></li>
+		   <li><a href='account.html'><span>Account</span></a></li>
+		   <li><a href='friends.html'><span>Friends</span></a></li>
+		   <li ><a href='support.html'><span>Support</span></a></li>
+	       <li ><a href='#'><span>Login/Logout</span></a></li>
+	       <li class='last' align="right"><span><input type="search" name="databaseSearch"><input Type="submit" value="Search"></span>
+	       </li>
+		</ul>
+	</div>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="mystyle.css">
+		<title>Game Journal</title>
+	</head>
+
+	<body>
+	<a href="index.html"><img src="data/logo.png" width="100%" height="200"></img></a>
+    <br />
+    <div class="columnBox" align="justify">
+            <img class="avatar" src="data/Mario.jpg" width="50" height="50" align="left"></img>
+            <h1 align="center">Mario's Account Settings</h1>
+        </div>
+    <hr />
+
+    <table style="width:100%; height:100%;">
+    	<tr style="width:100%;">
+        	<td style="width:33%; height:auto;">
+        		<div class="column1">
+	                <div class="journalBox" align="center" style="height:600px">
+	                    <h2>Privacy Settings</h2>
+                        <hr />
+                        <br />
+                        <form>
+                            <form action="">
+                                <h3>Journal Vissible To: </h3>
+                                <br />
+                                <select name="visibility">
+                                    <option value="everyone">Everyone</option>
+                                    <option value="friends">Friends Only</option>
+                                    <option value="noone">No One</option>
+                                </select>
+                            </form>   
+                            <br>
+                            <form action="">
+                                <h3>Who can find you: </h3>
+                                <br />
+                                <select name="searchable">
+                                    <option value="everyone">Everyone</option>
+                                    <option value="friends">Friends Only</option>
+                                    <option value="noone">No One</option>
+                                </select>
+                            </form>   
+                            <br>
+                            <form action="">
+                                <h3>Who can contact you: </h3>
+                                <br />
+                                <select name="contactable">
+                                    <option value="everyone">Everyone</option>
+                                    <option value="friends">Friends Only</option>
+                                    <option value="noone">No One</option>
+                                </select>
+                            </form>   
+                            <br>
+                            <input type="submit" value="Submit">
+                        </form>
+	                </div>
+                </div>
+            </td>
+            <td style="width:33%; height:auto;">
+                <div class="column2">
+                    <div class="journalBox" align="center" style="height:600px">
+                        <h2>User Settings</h2>
+                        <hr />
+                        <h3>Avatar:</h3>
+                        <img class="avatar" src="data/Mario.jpg" width="100" height="100"></img>
+                        <div align="center">
+                                <a href="#" class="readMoreBtn" >Upload New Avatar</a>
+                        </div>
+
+                        <form>
+                            <form action="">
+                                First Name: <input type="text" name="firstname">
+                                <br />
+                                Last Name: <input type="text" name="lastname">
+                                <br />
+                                <hr />
+                                Old Password: <input type="password" name="pwd">
+                                <br />
+                                Set New Password: <input type="password" name="pwd">
+                                <br />
+                                Confirm New Password: <input type="password" name="confirmpwd">
+                                <br />
+                            </form>   
+                            <br>
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            </td>
+        
+        	<td style="width:33%; height:auto;">
+                <div class="column2">
+                    <div class="journalBox" align="center" style="height:600px">
+                        <h2>Notification Settings</h2>
+                        <hr />
+                        <br />
+                        <form>
+                            <form action="">
+                                <h3>Notification Schedule:</h3>
+                                <br />
+                                <input type="radio" name="schedule" value="Daily">Daily<br />
+                                <input type="radio" name="schedule" value="Weekly">Weekly<br />
+                                <input type="radio" name="schedule" value="Monthly">Monthly
+                            </form>   
+                            <br>
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    
+	</body>
+    <footer>
+        <div class="columnBox" align="center">
+            <a href="https://www.facebook.com/"><img src="data/facebook.png"></img></a>
+            <a href="https://twitter.com/"><img src="data/twitter.png"></img></a>
+            <a href="https://plus.google.com/"><img src="data/google.png"></img></a>
+            © 2014 Clockwork Productions
+        </div>
+    </footer>
+</div>
+</html>

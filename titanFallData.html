@@ -1,0 +1,178 @@
+<!--
+Created by Bramwell Su
+RTA 223
+April 4 2013
+
+Some code based off from:
+http://cssmenumaker.com/
+http://www.cssbuttongenerator.com/
+http://snook.ca/archives/javascript/simplest-jquery-slideshow
+http://css-tricks.com/snippets/jquery/simple-auto-playing-slideshow/
+-->
+<!DOCTYPE html>
+<html>
+
+<div class='globalDIV'>
+  <div id='cssmenu'>
+    <ul>
+       <li><a href='index.html'><span>Game Journal</span></a></li>
+       <li><a href='myjournal.html'><span>My Journal</span></a></li>
+       <li><a href='account.html'><span>Account</span></a></li>
+       <li><a href='friends.html'><span>Friends</span></a></li>
+       <li ><a href='support.html'><span>Support</span></a></li>
+         <li ><a href='#'><span>Login/Logout</span></a></li>
+         <li class='last' align="right"><span><input type="search" name="databaseSearch"><input Type="submit" value="Search"></span>
+         </li>
+    </ul>
+  </div>
+
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <title>Game Journal</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+        <script>
+          
+
+          var delay = 4000; //delay between messages in milliseconds
+          var currentMessage = 1; //whats the currentlly displayed message index?
+          var messages = new Array(); //array containing all of the messages
+          messages[0] = 'Titanfall delayed for XBox 360';
+          messages[1] = 'Sony announces Project Morpheus, a new Virtual Reality Set';
+          messages[2] = 'Twitch Beats Lord Helix';
+        
+          /**
+          * Does all the hard work making the message switch.
+          */
+          function switchMessage(){
+            if(currentMessage == messages.length){
+                currentMessage = 0; 
+            }
+
+            document.getElementById("messageContainer").innerHTML = messages[currentMessage++];
+          }
+        
+          window.onload = function(){
+            setInterval(switchMessage, delay);  //setting a repeating interval instead of a timeout
+          }
+
+          $(function(){
+          $('.datalinks > :gt(0)').hide();
+          setInterval(function(){$('.datalinks > :first-child').fadeOut().next().fadeIn().end().appendTo('.datalinks');}, delay);
+          });
+        </script>
+  </head>
+
+  <body>
+  <a href="index.html"><img src="data/logo.png" width="100%" height="200"></img></a>
+    <br />
+
+    <hr />
+
+    <table style="width:100%; height:100%;">
+      <tr style="width:100%;">
+          <td style="width:40%; height:50%;">
+            <div class="columnBox" align="left">
+                  <div>
+                    <img class="avatar" src="data/Titanfall_logo.png" height="100px" width="300px"></img>
+                  </div>
+                  <div class="datalinks" align="center">
+                   <img src="data/titanfall1.jpg" width="400" height="200"></img>
+                   <img src="data/titanfall2.jpg" width="400" height="200"></img>
+                   <img src="data/titanfall3.jpg" width="400" height="200"></img>
+                   <img src="data/titanfall4.jpg" width="400" height="200"></img>
+                  </div>
+                  <div>
+                  <p align="center">
+                      Genre: Action
+                      <br />
+                      Release Date: 11 March 2013
+                      <br />
+                      Developer: Respawn Entertainment
+                      <br />
+                      Publisher: Electronic Arts
+                      <br />
+                      Metacritic: 87
+                      <br />
+                      Website: <a href="http://www.titanfall.com/"> http://www.titanfall.com/</a>
+                    </p>
+                    <hr />
+                    <p align="center">
+                      Game Owned: Yes
+                      <br />
+                      Last Time Played: 28 April 2014
+                      <br />
+                      Total Time Played: 10 Hours 11 Minutes
+                      <br />
+                      Achievements: 35
+                    </p>
+                    <hr />
+                  </div>
+                </div>
+            </td>
+        
+          <td rowspan="2" style="width:60%; height:100%;">
+                <div class="columnBox" align="left">
+                    <h1 align="left">Titanfall</h1>
+                    <h3>About the Game</h3>
+                    <p>
+                      Bring in the Titans
+                      <br />
+                      Stand by for Titanfall. Crafted by key developers behind the Call of Duty franchise, Titanfall is the first next-gen shooter that combines pure adrenaline, wall-running, double-jumping action with powerful, fast-paced titan warfare to set the new bar for online multiplayer gameplay.
+                      <br />
+                      Already the winner of more than 75 coveted awards from critics around the world, Titanfall is winning over fans with its thrilling, dynamic first-person action gameplay featuring elite assault pilots and agile, heavily-armored, 24-foot titans.
+                    </p>
+                    <hr />
+                    <h3 align="center">Global Ranking</h3>
+                    <img class="meter" src="data/globalRank3.png"></img>
+                    <h3 align="center">Friends Ranking</h3>
+                    <img class="meter" src="data/friendRank3.png"></img>
+                    <h3>Latest Achievments</h3>
+                    <div>
+                      <img src="data/1376808.jpg" align="left" width="64" height="64"></img>
+                      Customize Your Ride
+                      <br />
+                      Achieved: 5 March 2014
+                      <br />
+                      Number of Players that has this: 84%;
+                    </div> 
+                    <div>
+                      <img src="data/1376798.jpg" align="left" width="64" height="64"></img>
+                      Build Yourself
+                      <br />
+                      Achieved: 4 March 2014
+                      <br />
+                      Number of Players that has this: 85%;
+                    </div> 
+                    <div>
+                      <img src="data/1376802.jpg" align="left" width="64" height="64"></img>
+                      Like A Vacation
+                      <br />
+                      Achieved: 4 March 2014
+                      <br />
+                      Number of Players that has this: 94%;
+                    </div> 
+                    <hr />
+                    <h3>Tips from Friends</h3>
+                    <p>
+                    </p>
+
+                </div>
+            </td>
+        </tr>
+                 
+        
+    </table>
+    
+  </body>
+  <footer>
+    <div class="columnBox" align="center">
+      <a href="https://www.facebook.com/"><img src="data/facebook.png"></img></a>
+      <a href="https://twitter.com/"><img src="data/twitter.png"></img></a>
+      <a href="https://plus.google.com/"><img src="data/google.png"></img></a>
+            © 2014 Clockwork Productions
+    </div>
+  </footer>
+</div>
+</html>

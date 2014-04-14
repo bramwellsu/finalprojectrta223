@@ -1,0 +1,205 @@
+<!--
+Created by Bramwell Su
+RTA 223
+April 4 2013
+
+Some code based off from:
+http://cssmenumaker.com/
+http://www.cssbuttongenerator.com/
+http://snook.ca/archives/javascript/simplest-jquery-slideshow
+http://css-tricks.com/snippets/jquery/simple-auto-playing-slideshow/
+-->
+<!DOCTYPE html>
+<html>
+
+<div class='globalDIV'>
+	<div id='cssmenu'>
+		<ul>
+		   <li><a href='index.html'><span>Game Journal</span></a></li>
+		   <li><a href='myjournal.html'><span>My Journal</span></a></li>
+		   <li><a href='account.html'><span>Account</span></a></li>
+		   <li><a href='friends.html'><span>Friends</span></a></li>
+		   <li ><a href='support.html'><span>Support</span></a></li>
+	       <li ><a href='#'><span>Login/Logout</span></a></li>
+	       <li class='last' align="right"><span><input type="search" name="databaseSearch"><input Type="submit" value="Search"></span>
+	       </li>
+		</ul>
+	</div>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="mystyle.css">
+		<title>Game Journal</title>
+	</head>
+
+	<body>
+	<a href="index.html"><img src="data/logo.png" width="100%" height="200"></img></a>
+    <br />
+
+    <hr />
+
+    <table style="width:100%; height:100%;">
+    	<tr style="width:100%;">
+        	<td style="width:33%; height:50px;">
+        		<div class="column1">
+	                <div class="columnBox" align="center">
+	                    <h1>Latest News</h1>
+	                </div>
+                </div>
+            </td>
+            <td style="width:33%; height:50px;">
+                <div class="column2">
+                    <div class="columnBox" align="center">
+                        <h1>Now Playing</h1>
+                    </div>
+                </div>
+        	</td>
+        
+        	<td style="width:33%; height:50px;">
+                <div class="column3" align="center">
+                    <div class="columnBox">
+                        <h1>Friends</h1>
+                    </div>
+                </div>
+        	</td>  
+        </tr>
+       
+       	<tr>
+       		<td style="height:30%;">
+       			<div class="column1">
+	                <div class="columnBox">
+	                        <h2><a href="titanfallBlog.html" style="color:#D7EAE6;">Titanfall delayed for Xbox 360</a></h2>
+	                        <p>March 19, 2014</p>
+	                        <p style="text-align:justify;">Patrick Söderlund, president of EA, has posted today that Titanfall's launch for the Xbox 360 will be delayed for two...</p>
+	                        <br />
+	                        <img src="data/lb4mxmjnfeslr8fah887.jpg" width="100%" height="100px">
+	                        <div align="center">
+	                        	<a href="titanfallBlog.html" class="readMoreBtn" >Read More</a>
+	                        </div>
+	                </div>
+	            </div>
+            </td>
+
+            <td rowspan="3" style="height:100%; ">	<!-- now playing-->
+            	<div class="columnBox">
+                    <div>
+                        <a href="leagueOfLegendData.html"><img src="data/League_of_Legends.png" width="100" height="50"></img></a>
+                        Last Update: 03/10/14
+                        
+                    </div>
+                    <br />
+                    <div>
+                        <a href="bioshockInfiniteData.html"><img src="data/500px-BioShock_Infinite_Logo.png" width="100" height="50"></img></a>
+                        Last Update: 02/03/14
+                    </div>
+                    <br />
+                    <div>
+                        <a href="titanFallData.html"><img src="data/Titanfall_logo.png" width="100" height="50"></img></a>
+                        Last Update: 02/28/14
+                    </div>
+                    <br />
+                    <div>
+                        <a href="ftlData.html"><img src="data/FTL_Faster_Than_Light_Logo.jpg" width="100" height="50"></img></a>
+                        Last Update: 02/15/14
+                    </div>
+                </div>
+            </td>
+
+            <td rowspan="3" style="height:100%;">	<!-- friends -->
+            	<div class="columnBox">
+            		<div align="center">
+            			<b>Leeroy Jenkins</b>
+            			<br />
+                        <a href="leeroyJournal.html"><img class="avatar" src="data/jenkins.jpg" width="50" height="50"></img></a>
+                        <br />
+                        <img src="data/yellow_light.png" width="20" height="20"></img>
+                        Playing World of Warcraft
+                        <br />
+                        "Leeeeeeeerrrrrroooooooyyy Jennnn..."   
+                    </div>
+
+                    <br />
+                    <div align="center">
+                        <b>Link</b>
+            			<br />
+                        <a href="linkJournal.html"><img class="avatar" src="data/1cd6673e-1094-4f1d-9b04-b59b2730995f.jpg" width="50" height="50"></img></a>
+                        <br />
+                        <img src="data/green_light.png" width="20" height="20"></img>
+                        Online
+                        <br />
+                        "My name isn't Zelda!"  
+                    </div>
+
+                    <br />
+                    <div align="center">
+                        <b>Gordon Freeman</b>
+            			<br />
+                        <a href="gordonJournal.html"><img class="avatar" src="data/Gordon_Freeman.jpg" width="50" height="50"></img></a>
+                        <br />
+                        <img src="data/yellow_light.png" width="20" height="20"></img>
+                        Playing Half-Life 3
+                        <br />
+                        "..."  
+                    </div>
+                    <br />
+                    <div align="center">
+                        <b>Creeper</b>
+            			<br />
+                        <a href="creeperJournal.html"><img class="avatar" src="data/Creeper-the-minecraft-creeper-32729200-1200-1200.png" width="50" height="50"></img></a>
+                        <img src="data/red_light.png" width="20" height="20"></img>
+                        Offline
+                        <br />
+                        "Sssssssssssss"  
+                    </div>
+            	</div>
+           	</td>
+        </tr>
+
+        <tr>
+        	<td style="height:30%;">
+        		<div class="column1">
+	                <div class="columnBox">
+	                        <h2><a href="morpheusBlog.html" style="color:#D7EAE6;">Sony announces Project Morpheus, a new Virtual Reality</a></h2>
+	                        <p>March 19, 2014</p>
+	                        <p style="text-align:justify;">Sony revealed their own Virtual Reality set, Project Morpheus, at GDC 2014. It'll be developed for the Playstation 4 console. Currently games being developed to...</p>
+	                        <br />
+	                        <img src="data/project_morpheus_press.0_cinema_960.0.jpg" width="100%" height="100px">
+	                        <div align="center">
+	                        	<a href="morpheusBlog.html" class="readMoreBtn" >Read More</a>
+	                        </div>
+	                </div>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+        	<td style="height:30%">
+        		<div class="column1">    
+	                <div class="columnBox">
+	                        <h2><a href="twitchHelixBlog.html" style="color:#D7EAE6;">Twitch beats Lord Helix</a></h2>
+	                        <p>January 1, 2014</p>
+
+	                        <p style="text-align:justify;">After 13 days, Twitch Plays Pokemon has successfully beaten Red and Pokemon Crystal. After 13 days traveling through the region of Unova and Kanto. In a tense 20 minute battle, our hero AJ was down to his last pokemon Lazorgatr (Feraligatr). Taking down each of Red's...</p>
+	                        <br />
+	                        <img src="data/11fafff969ca8bdd73ee91dd3bfb9180-twitch-plays-pokemon-has-killed-lord-helix.jpg" width="100%" height="100px">
+	                        <div align="center">
+	                        	<a href="twitchHelixBlog.html" class="readMoreBtn" >Read More</a>
+	                        </div> 
+	                </div>
+            	</div>
+           	</td>
+        </tr>            
+        
+    </table>
+    
+	</body>
+    <footer>
+        <div class="columnBox" align="center">
+            <a href="https://www.facebook.com/"><img src="data/facebook.png"></img></a>
+            <a href="https://twitter.com/"><img src="data/twitter.png"></img></a>
+            <a href="https://plus.google.com/"><img src="data/google.png"></img></a>
+            © 2014 Clockwork Productions
+        </div>
+    </footer>
+</div>
+</html>

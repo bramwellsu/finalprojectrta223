@@ -1,0 +1,113 @@
+<!--
+Created by Bramwell Su
+RTA 223
+April 4 2013
+
+Some code based off from:
+http://cssmenumaker.com/
+http://www.cssbuttongenerator.com/
+http://snook.ca/archives/javascript/simplest-jquery-slideshow
+http://css-tricks.com/snippets/jquery/simple-auto-playing-slideshow/
+-->
+<!DOCTYPE html>
+<html>
+
+<div class='globalDIV'>
+	<div id='cssmenu'>
+		<ul>
+		   <li><a href='index.html'><span>Game Journal</span></a></li>
+		   <li><a href='myjournal.html'><span>My Journal</span></a></li>
+		   <li><a href='account.html'><span>Account</span></a></li>
+		   <li><a href='friends.html'><span>Friends</span></a></li>
+		   <li ><a href='support.html'><span>Support</span></a></li>
+	       <li ><a href='#'><span>Login/Logout</span></a></li>
+	       <li class='last' align="right"><span><input type="search" name="databaseSearch"><input Type="submit" value="Search"></span>
+	       </li>
+		</ul>
+	</div>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="mystyle.css">
+		<title>Game Journal</title>
+	</head>
+
+	<body>
+	<a href="index.html"><img src="data/logo.png" width="100%" height="200"></img></a>
+    <br />
+
+    <hr />
+
+    <table style="width:100%; height:50%;">
+       	<tr style="width:100%;">
+       		<td colspan="2" style="width:100%; height:20%;">
+                <div class="column1">
+                    <div class="columnBox">
+                        <h1 align="center">Support</h1>
+                    </div>
+                </div>
+            </td>
+        </tr>
+
+        <tr style="width:100%;">
+            <td style="width:60%; height:100%;">
+                <div class="column1">
+                    <div class="columnBox">
+                        <h2>General FAQ</h2>
+                        <h3>Frequently asked questions are listed below.</h3>
+                        <hr />
+                        <br />
+                        <h3>What is Game Journal?</h3>
+                        <h4>Game Journal is a website designed for gamers to keep track and manage their game libraries. Users can search up any game titles on any plaftorm and add it to their library. Game Journal is designed so that you can share your libraries and tips with your fellow gamers and friends.</h4>
+                        <hr />
+                        <h3>How do you use Game Journal?</h3>
+                        <h4>Once you create an account, you can begin adding games to your account's game journal. You can do this by searching up the game title through different criterias such as console platform, release date, genres and more. You can share your libraries through various social networks like Facebook and Twitter by pressing the icons in the bottom navigation bar.</h4>
+                        <hr />
+                        <h3>Does Game Journal require a subscription?</h3>
+                        <h4>Nope. Game Journal is completely free for users to use.</h4>
+                        <hr />
+                        <h3>Who are you?</h3>
+                        <h4>We are Clockwork Productions. We began as a group of gamers who wanted to find a tool that allowed us to manage our gaming libraries while still doing our everyday lives. We created Game Journal as the answer to our needs. We formed Clockwork Productions in 2012 so that we can share our creation with the gaming community.
+                        </h4>
+                    </div>
+                </div>
+            </td>
+            <td style="height:100%; width:40%;">
+                <div class="column1">
+                    <div class="conversationBox" >
+                           <h1 align="center">Contact Us</h1>
+                           <form>
+                            Name: <input type="text" name="name"><br>
+                            Email: <input type="text" name="email"><br>
+                            Subject: <input type="text" name="subject"><br>
+                            Message: <br/><textarea rows="10" cols="30"></textarea><br />
+                            <input type="submit" value="Submit">
+                            <br />
+                           </form>
+                           <p>
+                            Telephone: 1-888-111-1111
+                            <br />
+                            Office Location:
+                            <br /> 
+                            123 Fake Street
+                            <br />
+                            T0L 3E7
+                            <br />
+                            Somewhere</p>
+                    </div>
+                </div>
+            </td>
+        </tr>  
+    </table>
+	</body>
+
+	<footer>
+		<div class="columnBox" align="center">
+			<a href="https://www.facebook.com/"><img src="data/facebook.png"></img></a>
+			<a href="https://twitter.com/"><img src="data/twitter.png"></img></a>
+			<a href="https://plus.google.com/"><img src="data/google.png"></img></a>
+            © 2014 Clockwork Productions
+		</div>
+	</footer>
+</div>
+</html>
